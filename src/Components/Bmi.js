@@ -2,6 +2,7 @@ import React, { useState, memo } from "react";
 
 const Bmi = () => {
   const [user, setUser] = useState({});
+  const [check] = useState(JSON.parse(localStorage.getItem("user") || "{}"));
 
   const getData = () => {
     setUser(JSON.parse(localStorage.getItem("user")));
@@ -46,6 +47,7 @@ const Bmi = () => {
             className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
             type="button"
             onClick={getData}
+            disabled={Object.keys(check).length === 0}
           >
             Bilgileri Çek
           </button>
