@@ -6,16 +6,17 @@ import { useNavigate } from "react-router-dom";
 const Form = () => {
   const [user, setUser] = useState(
     JSON.parse(
-      localStorage.getItem("user") || {
-        name: "",
-        surname: "",
-        gender: "",
-        height: "",
-        weight: "",
-        birthDate: "",
-        bmi: 0,
-        result: "",
-      }
+      localStorage.getItem("user") ||
+        JSON.stringify({
+          name: "",
+          surname: "",
+          gender: "",
+          height: "",
+          weight: "",
+          birthDate: "",
+          bmi: 0,
+          result: "",
+        })
     )
   );
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ const Form = () => {
     const result = e.target.value.replace(/\D/g, "");
     setUser((user) => ({ ...user, weight: result }));
   };
-
+  debugger;
   const canSubmit = [
     user.name.trim(),
     user.surname.trim(),
