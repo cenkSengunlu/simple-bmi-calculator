@@ -42,7 +42,7 @@ const Form = () => {
     const result = e.target.value.replace(/\D/g, "");
     setUser((user) => ({ ...user, weight: result }));
   };
-  debugger;
+
   const canSubmit = [
     user.name.trim(),
     user.surname.trim(),
