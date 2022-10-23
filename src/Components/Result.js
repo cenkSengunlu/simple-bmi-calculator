@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 const Result = () => {
   const [user] = useState(JSON.parse(localStorage.getItem("user") || "{}"));
-  console.log(user);
   return (
     <>
       <div className="lg:w-6/12 px-4 md:px-0 pt-4">
