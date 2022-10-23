@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.aside-form {
+  background-image: url("./images/food.jpg");
+}
+
+.aside-man {
+  background-image: url("./images/man.jpg");
+}
+
+.aside-woman {
+  background-image: url("./images/woman.jpg");
+}
+
+.aside {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
