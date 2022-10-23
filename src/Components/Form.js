@@ -80,7 +80,18 @@ const Form = () => {
     }
   };
 
-  const handleClear = () => {};
+  const handleClear = () => {
+    setUser({
+      name: "",
+      surname: "",
+      gender: "",
+      height: "",
+      weight: "",
+      birthDate: "",
+      bmi: 0,
+      result: "",
+    });
+  };
   return (
     <>
       <div className="lg:w-6/12 px-4 md:px-0 pt-4">
